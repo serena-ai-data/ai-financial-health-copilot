@@ -1,0 +1,14 @@
+{
+  "profile": "Emma",
+  "synthetic": true,
+  "currency": "CNY",
+  "monthly_income": 15000,
+  "essential_expenses": 8000,
+  "total_monthly_spending": 11500,
+  "cash_savings": 20000,
+  "credit_card_balance": 12000,
+  "other_short_term_debt": 0,
+  "investments": 30000,
+  "protection_status": "partial",
+  "notes": "Synthetic portfolio data for public demo use only."
+}
