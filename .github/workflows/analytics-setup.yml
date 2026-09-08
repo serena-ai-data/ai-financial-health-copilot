@@ -1,0 +1,57 @@
+name: One-time portfolio analytics setup
+
+on:
+  push:
+    paths:
+      - '.github/workflows/analytics-setup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add privacy-friendly analytics and portfolio events
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          placeholder = '<script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>'
+          analytics = '''\n<!-- Simple Analytics - privacy-friendly, cookieless analytics -->\n<script async data-strict-utm="true" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>\n<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>\n'''
+
+          # Main case-study page: pageviews + key click into the interactive demo.
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          if 'window.sa_event=window.sa_event||function()' not in s:
+              s = s.replace('<title>AI Financial Health Copilot — Serena Qin</title>', '<title>AI Financial Health Copilot — Serena Qin</title>\n' + placeholder, 1)
+          if 'portfolio_open_live_demo' not in s:
+              event_js = '''\n<script>\ndocument.addEventListener('DOMContentLoaded', function () {\n  document.querySelectorAll('a[href^="demo/"]').forEach(function (link) {\n    link.addEventListener('click', function () { sa_event('portfolio_open_live_demo'); });\n  });\n});\n</script>\n'''
+              s = s.replace('</body></html>', event_js + analytics + '</body></html>', 1)
+          p.write_text(s, encoding='utf-8')
+
+          # Interactive demo: record meaningful depth, not just page loads.
+          p = Path('demo/index.html')
+          s = p.read_text(encoding='utf-8')
+          if 'window.sa_event=window.sa_event||function()' not in s:
+              s = s.replace('<title>AI Financial Health Copilot — Demo</title>', '<title>AI Financial Health Copilot — Demo</title>' + placeholder, 1)
+          s = s.replace('onclick="go(\'consent\',2)"', 'onclick="sa_event(\'demo_start\');go(\'consent\',2)"', 1)
+          s = s.replace('function loadEmma(){', "function loadEmma(){sa_event('demo_load_sample');", 1)
+          s = s.replace('function analyse(){', "function analyse(){sa_event('demo_analysis_complete');", 1)
+          s = s.replace("function ask(){let t=q.value.trim();if(!t)return;", "function ask(){let t=q.value.trim();if(!t)return;sa_event('demo_copilot_question');", 1)
+          if 'scripts.simpleanalyticscdn.com/latest.js' not in s:
+              s = s.replace('</body></html>', analytics + '</body></html>', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit analytics setup
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html demo/index.html
+          git commit -m "Add privacy-friendly portfolio analytics"
+          git push
