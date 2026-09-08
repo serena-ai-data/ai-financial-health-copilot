@@ -25,6 +25,28 @@ The MVP combines:
 
 `Welcome -> Consent -> Add data -> Review & verify -> Analyse -> Dashboard -> Explainability -> Action plan -> AI Copilot`
 
+## Product-owner view
+
+This project is deliberately documented beyond a concept deck. The repository includes the product artefacts needed to show how the MVP could move from problem framing into engineering delivery and post-launch iteration:
+
+- MVP scope and explicit out-of-scope decisions;
+- core user stories and functional requirements;
+- prioritised backlog;
+- acceptance criteria and edge cases;
+- engineering-facing system boundaries;
+- release roadmap;
+- product trade-offs;
+- launch and post-launch measurement plan;
+- AI evaluation and safety boundaries.
+
+See `docs/product-ownership.md` for the technical product ownership and delivery plan.
+
+## System boundary
+
+`User / financial source -> validation & review -> deterministic rules engine -> financial state -> AI explanation layer -> user interface`
+
+The deterministic layer remains the source of truth for confirmed financial facts, calculations, score classification and transaction state. The AI layer may interpret and explain verified information, surface uncertainty and answer grounded questions, but it must not silently alter balances, verified facts or score calculations.
+
 ## Why deterministic rules matter
 
 Financial states and numerical calculations need consistency and auditability. In this prototype, calculations and score classification are deterministic. AI is positioned as an interpretation and explanation layer rather than the source of truth for balances, transaction states or financial facts.
@@ -41,6 +63,36 @@ The product includes concepts such as:
 - human verification for uncertain or consequential conclusions;
 - clear boundaries between AI assistance and financial execution.
 
+## Proposed release path
+
+### MVP — Financial understanding
+Manual or synthetic input, review, deterministic analysis, explainability, prioritised next-best action and a bounded Copilot interaction.
+
+### V2 — Connected financial context
+Bank / wallet / insurance data connectors where legally and technically feasible, with source-level traceability and stronger exception handling.
+
+### V3 — Personalised financial actions
+Goal planning, context-aware nudges, deeper protection and liquidity analysis, and experimentation around action ranking.
+
+### V4 — Governed execution
+Human-confirmed transaction or product hand-off, stronger suitability / eligibility controls, audit trails and explicit limits on autonomous AI execution.
+
+## Proposed post-launch metrics
+
+These are design metrics for future testing, not claimed production results.
+
+- financial-health report completion rate;
+- Time to First Insight;
+- step-level drop-off rate;
+- repeat usage;
+- input correction rate;
+- explainability / next-best-action adoption;
+- unsupported-claim rate;
+- numerical-consistency rate;
+- unsafe-recommendation rate;
+- user-reported clarity / confidence;
+- escalation rate in a production workflow.
+
 ## Demo data
 
 The repository contains synthetic user data only. No real bank credentials, account numbers, policies, customer information or transaction data are used.
@@ -50,6 +102,7 @@ The repository contains synthetic user data only. No real bank credentials, acco
 - `index.html` — product case-study website
 - `demo/` — interactive product prototype
 - `docs/product-requirements.md` — MVP scope and requirements
+- `docs/product-ownership.md` — backlog, acceptance criteria, system boundary, roadmap, trade-offs and launch plan
 - `docs/scoring-methodology.md` — deterministic scoring logic
 - `docs/ai-safety-and-trust.md` — AI boundaries and trust design
 - `docs/market-localisation.md` — China and Southeast Asia localisation hypotheses
@@ -58,7 +111,7 @@ The repository contains synthetic user data only. No real bank credentials, acco
 
 ## Product ownership
 
-Independent product case study by **Serena Qin**. Product strategy, workflow design, scoring logic, trust-and-compliance framework, prototype design and evaluation planning were developed for portfolio purposes.
+Independent product case study by **Serena Qin**. Product strategy, workflow design, scoring logic, trust-and-compliance framework, prototype design, product-delivery planning and evaluation framework were developed for portfolio purposes.
 
 ## Disclaimer
 
