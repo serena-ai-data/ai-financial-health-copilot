@@ -1,126 +1,73 @@
 # Serena — AI Product Portfolio
 
-Independent AI product portfolio focused on **agentic workflows, FinTech, onboarding, UX, product delivery and AI evaluation**.
+Independent AI product portfolio organised by **product capability**, not by target employer.
 
-## Portfolio entry
+## Portfolio structure
 
-- **Portfolio landing page:** `portfolio/index.html`
-- **Central AI onboarding redesign:** `central-ai-onboarding/`
-- **ApplyFlow AI application-operations assistant:** `applyflow/`
-- **AI Financial Health Copilot:** `index.html`
-- **AI Neobank / BJAK-oriented extension:** `neobank/`
+### 1. Agentic AI / Workflow Automation — ApplyFlow AI
+An AI application-operations assistant that turns fragmented applicant status, documents and deadlines into prioritised next actions.
 
-> All cases are independent portfolio projects. They are not claimed as employer work or production outcomes. Synthetic data is used where appropriate.
+**Demonstrates:**
+- agentic workflow design;
+- operational prioritisation;
+- next-best-action logic;
+- human-approved follow-up actions;
+- product requirements and interactive prototyping.
 
----
+- Case: `applyflow/`
+- Prototype: `applyflow/prototype.html`
+- PRD: `applyflow/PRD.md`
 
-## Case 1 — Central AI Onboarding Redesign
-
-A targeted, hypothesis-driven case exploring how an AI business platform could move a new SMB user from signup to a first successful AI action faster.
+### 2. AI SaaS / Activation & UX — Central AI Onboarding Redesign
+An independent product redesign exploring how an AI business platform could move a new SMB user from signup to a first successful AI action faster.
 
 **Demonstrates:**
 - onboarding and UX thinking;
-- activation funnel design;
+- activation-funnel design;
 - prioritisation;
-- mini PRD and acceptance criteria;
 - product metrics;
-- interactive prototype.
+- mini PRD and acceptance criteria;
+- interactive prototyping.
 
-This case is **not affiliated with or endorsed by Wing / Central AI**. No internal user data or production conversion metrics are claimed.
+- Case: `central-ai-onboarding/`
+- Prototype: `central-ai-onboarding/prototype.html`
+- PRD: `central-ai-onboarding/PRD.md`
 
----
+This case is an independent analysis of a public product. It is not affiliated with or endorsed by Wing / Central AI, and no internal user data or production metrics are claimed.
 
-## Case 2 — ApplyFlow AI
+### 3. AI FinTech / Trust & Product Delivery — AI Financial Health Copilot
+A deeper AI FinTech MVP exploring how fragmented financial information can be turned into understandable, prioritised and explainable next-step guidance.
 
-An AI application-operations assistant inspired by real workflow complexity in education consulting, but built entirely with **synthetic applicant names and data** for portfolio purposes.
-
-The product concept combines:
-- applicant status;
-- document completeness;
-- deadlines;
-- risk prioritisation;
-- natural-language querying;
-- next-best-action recommendations;
-- human-approved follow-up tasks.
-
-**Core principle:** AI may summarise, prioritise and recommend, but structured applicant records remain the source of truth.
-
----
-
-## Case 3 — AI Financial Health Copilot
-
-A deeper AI FinTech product case exploring how fragmented financial information can be turned into understandable, prioritised and explainable next-step guidance.
-
-> **Status:** public product prototype. The current demo uses synthetic data and deterministic scoring rules. The AI Copilot interaction is locally simulated and is **not yet connected to a live LLM API**.
-
-### Product idea
-
-Many users hold financial products across different providers: bank accounts, credit cards, insurance policies and investments. Individual apps show product-level information, but users may still struggle to understand their overall financial position and decide what deserves attention first.
-
-AI Financial Health Copilot is designed around a simple principle:
-
-**AI explains. Rules calculate. Users stay in control.**
-
-The MVP combines:
-- structured financial input;
-- deterministic calculations and scoring;
-- review-and-verify steps before analysis;
-- prioritised next-best actions;
-- explainability for each score;
-- a trust layer covering consent, uncertainty, traceability and auditability.
-
-### Core flow
-
-`Welcome -> Consent -> Add data -> Review & verify -> Analyse -> Dashboard -> Explainability -> Action plan -> AI Copilot`
-
-### Product-owner view
-
-This project is deliberately documented beyond a concept deck. The repository includes the product artefacts needed to show how the MVP could move from problem framing into engineering delivery and post-launch iteration:
-
-- MVP scope and explicit out-of-scope decisions;
-- core user stories and functional requirements;
-- prioritised backlog;
-- acceptance criteria and edge cases;
-- engineering-facing system boundaries;
-- release roadmap;
-- product trade-offs;
-- launch and post-launch measurement plan;
+**Demonstrates:**
+- FinTech product thinking;
+- deterministic-vs-AI system boundaries;
+- trust, explainability and human control;
+- technical product ownership;
+- launch and post-launch measurement;
 - AI evaluation and safety boundaries.
 
-See `docs/product-ownership.md` for the technical product ownership and delivery plan.
+- Main case: `index.html`
+- Interactive demo: `demo/`
+- Product requirements: `docs/product-requirements.md`
+- Product ownership: `docs/product-ownership.md`
+- AI evaluation: `docs/ai-evaluation.md`
+- AI Neobank extension: `neobank/`
 
-### System boundary
+The Neobank case is treated as an extension of the FinTech product line rather than as a separate employer-specific category.
 
-`User / financial source -> validation & review -> deterministic rules engine -> financial state -> AI explanation layer -> user interface`
+---
 
-The deterministic layer remains the source of truth for confirmed financial facts, calculations, score classification and transaction state. The AI layer may interpret and explain verified information, surface uncertainty and answer grounded questions, but it must not silently alter balances, verified facts or score calculations.
+## Portfolio landing page
 
-### Trust & compliance design
+- `portfolio/index.html`
 
-The product includes concepts such as:
-- consent before sensitive-data collection;
-- source traceability for extracted information;
-- user correction before AI-derived data influences analysis;
-- visible uncertainty instead of false precision;
-- audit-trail thinking for material changes;
-- human verification for uncertain or consequential conclusions;
-- clear boundaries between AI assistance and financial execution.
+The public portfolio is intentionally structured around three complementary product strengths:
 
-### Proposed post-launch metrics
+1. **Agentic workflow automation**
+2. **AI SaaS activation and UX**
+3. **Trustworthy AI FinTech product delivery**
 
-These are design metrics for future testing, not claimed production results.
-
-- financial-health report completion rate;
-- Time to First Insight;
-- step-level drop-off rate;
-- repeat usage;
-- input correction rate;
-- explainability / next-best-action adoption;
-- unsupported-claim rate;
-- numerical-consistency rate;
-- unsafe-recommendation rate;
-- user-reported clarity / confidence;
-- escalation rate in a production workflow.
+Target-company matching happens at the application stage rather than in the public portfolio taxonomy.
 
 ---
 
@@ -134,4 +81,4 @@ No real bank credentials, account numbers, policies, customer records or applica
 
 ## General disclaimer
 
-These projects are independent portfolio work and are not financial, legal, admissions or investment advice. Brand-targeted cases are not affiliated with, endorsed by, or produced for the referenced companies.
+These projects are independent portfolio work and are not financial, legal, admissions or investment advice. Any public-product redesign is based only on publicly observable product information and is not affiliated with, endorsed by, or produced for the referenced company.
