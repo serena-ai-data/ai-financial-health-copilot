@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="description" content="Interactive concept prototype for an AI neobank product case by Serena Qin." />
+<title>AI Neobank Concept Prototype — Serena Qin</title>
+<script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
+<style>
+:root{--bg:#0b0f0d;--panel:#121714;--panel2:#171d19;--line:#283029;--text:#f3f7f4;--muted:#aab4ad;--accent:#b8ff62;--accent2:#72e6b1;--warning:#ffd166;--danger:#ff8e8e;--white:#fff;--shadow:0 30px 90px rgba(0,0,0,.35)}*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}.shell{min-height:100vh;display:grid;grid-template-columns:250px 1fr}.side{border-right:1px solid var(--line);padding:24px 18px;position:sticky;top:0;height:100vh;background:#0d120f}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.02em;margin:2px 8px 28px}.logo{width:34px;height:34px;border-radius:12px;background:linear-gradient(145deg,var(--accent),var(--accent2));box-shadow:0 8px 25px rgba(184,255,98,.18)}.nav{display:grid;gap:7px}.nav button{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:var(--muted);padding:12px 13px;border-radius:12px;text-align:left;cursor:pointer;font-weight:750}.nav button.active{background:#182019;color:#fff}.nav button.active .ico{color:var(--accent)}.ico{width:20px;text-align:center}.sideFoot{position:absolute;bottom:22px;left:18px;right:18px;padding:14px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:12px;line-height:1.5}.main{padding:30px 34px 54px;max-width:1420px;width:100%}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}.crumb{color:var(--muted);font-size:13px}.profile{display:flex;align-items:center;gap:10px}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#233026;color:var(--accent);font-weight:900}.view{display:none}.view.active{display:block}.hero{display:grid;grid-template-columns:1.45fr .55fr;gap:18px;margin-bottom:18px}.heroCard,.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}.heroCard{min-height:255px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 80% 0%,rgba(184,255,98,.12),transparent 32%),var(--panel)}.eyebrow{color:var(--accent);font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.heroCard h1{font-size:48px;letter-spacing:-.04em;line-height:1.02;margin:10px 0 12px}.heroCard p{color:var(--muted);max-width:760px;font-size:17px;line-height:1.55}.statRow{display:flex;gap:28px;flex-wrap:wrap}.stat small{display:block;color:var(--muted);margin-bottom:4px}.stat strong{font-size:22px}.next{background:linear-gradient(145deg,#1c261f,#141a16);border:1px solid #334235;border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:space-between}.next .label{color:var(--accent);font-size:12px;font-weight:900;letter-spacing:.08em}.next h3{font-size:24px;line-height:1.2;margin:10px 0}.next p{color:var(--muted);font-size:14px}.btn{border:1px solid var(--line);background:#171d19;color:#fff;padding:11px 14px;border-radius:12px;font-weight:850;cursor:pointer}.btn.primary{background:var(--accent);color:#0b0f0d;border-color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card h3{margin:0 0 14px;font-size:18px}.metricLabel{color:var(--muted);font-size:12px}.metricBig{font-size:30px;font-weight:950;margin:6px 0}.bar{height:8px;border-radius:99px;background:#252d27;overflow:hidden;margin-top:14px}.bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent2),var(--accent))}.tag{display:inline-flex;padding:5px 8px;border-radius:999px;background:#222b24;color:var(--accent);font-size:11px;font-weight:850}.sectionTitle{display:flex;justify-content:space-between;align-items:end;margin:28px 0 14px}.sectionTitle h2{margin:0;font-size:25px}.sectionTitle span{color:var(--muted);font-size:13px}.list{display:grid;gap:10px}.row{display:grid;grid-template-columns:1.1fr .8fr .7fr auto;align-items:center;gap:14px;padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.row small{color:var(--muted);display:block;margin-top:2px}.pill{padding:6px 9px;border-radius:999px;background:#1f2821;color:var(--accent);font-size:11px;font-weight:850}.pill.warn{color:var(--warning)}.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.insight{padding:18px;border-radius:16px;background:#151c17;border:1px solid var(--line)}.insight h4{margin:8px 0 6px;font-size:17px}.insight p{margin:0;color:var(--muted);line-height:1.55}.why{margin-top:12px;padding:13px;border-left:3px solid var(--accent);background:#101512;color:#c9d0cb;font-size:13px;line-height:1.6}.actionCard{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:20px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.actionCard+.actionCard{margin-top:11px}.actionCard h3{margin:0 0 7px}.actionCard p{margin:0;color:var(--muted);line-height:1.5}.confirm{display:none;margin-top:16px;padding:18px;border:1px solid #3a493d;border-radius:16px;background:#131a15}.confirm.show{display:block}.confirm b{display:block;margin-bottom:7px}.confirm p{color:var(--muted);line-height:1.5}.notice{padding:15px 16px;border-radius:14px;background:#191f1b;border:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.55;margin-bottom:16px}.footerLink{color:var(--accent);font-weight:850;text-decoration:none}.mobileNav{display:none}@media(max-width:1050px){.grid{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}.split{grid-template-columns:1fr}}@media(max-width:760px){.shell{display:block}.side{display:none}.main{padding:20px 16px 90px}.heroCard h1{font-size:38px}.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row>div:nth-child(2),.row>div:nth-child(3){display:none}.mobileNav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;bottom:0;left:0;right:0;background:#0d120f;border-top:1px solid var(--line);z-index:20}.mobileNav button{border:0;background:transparent;color:var(--muted);padding:12px 4px;font-size:11px}.mobileNav button.active{color:var(--accent)}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="side">
+  <div class="brand"><span class="logo"></span>Northstar AI Bank</div>
+  <div class="nav">
+    <button class="active" data-view="home"><span class="ico">⌂</span>Money Home</button>
+    <button data-view="accounts"><span class="ico">◎</span>Accounts</button>
+    <button data-view="protection"><span class="ico">◇</span>Protection</button>
+    <button data-view="insights"><span class="ico">✦</span>AI Insights</button>
+    <button data-view="actions"><span class="ico">→</span>Action Center</button>
+  </div>
+  <div class="sideFoot">Concept prototype · synthetic data only<br>Independent portfolio case by Serena Qin</div>
+</aside>
+<main class="main">
+  <div class="topbar"><div class="crumb">AI Neobank Concept Prototype</div><div class="profile"><span style="color:var(--muted);font-size:13px">Emma · China</span><span class="avatar">E</span></div></div>
+
+  <section class="view active" id="home">
+    <div class="hero">
+      <div class="heroCard">
+        <div><div class="eyebrow">Money Home</div><h1>Good evening, Emma.</h1><p>Your financial products live across different providers. This home view turns them into one decision layer: what you have, what needs attention, and what to do next.</p></div>
+        <div class="statRow"><div class="stat"><small>Illustrative net position</small><strong>¥338,000</strong></div><div class="stat"><small>Monthly free cash flow</small><strong>¥3,500</strong></div><div class="stat"><small>Connected products</small><strong>6</strong></div></div>
+      </div>
+      <div class="next"><div><div class="label">NEXT BEST ACTION</div><h3>Check whether your ¥12,000 card balance is interest-bearing.</h3><p>The product does not assume debt is expensive when key context is missing.</p></div><button class="btn primary" onclick="openAction('debt')">Review action</button></div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="metricLabel">Cash & bank</div><div class="metricBig">¥120k</div><span class="tag">Stable</span><div class="bar"><span style="width:78%"></span></div></div>
+      <div class="card"><div class="metricLabel">Investments</div><div class="metricBig">¥230k</div><span class="tag">Diversified</span><div class="bar"><span style="width:66%"></span></div></div>
+      <div class="card"><div class="metricLabel">Short-term debt</div><div class="metricBig">¥12k</div><span class="tag" style="color:var(--warning)">Needs context</span><div class="bar"><span style="width:38%;background:var(--warning)"></span></div></div>
+      <div class="card"><div class="metricLabel">Protection</div><div class="metricBig">3 policies</div><span class="tag">1 review</span><div class="bar"><span style="width:58%"></span></div></div>
+    </div>
+    <div class="sectionTitle"><h2>What changed this month</h2><span>Illustrative signals</span></div>
+    <div class="split"><div class="insight"><span class="tag">Cash flow</span><h4>Spending rose 8% month-on-month.</h4><p>Most of the increase came from travel and dining. Essential spending is broadly stable.</p></div><div class="insight"><span class="tag">Protection</span><h4>One policy needs verification.</h4><p>A waiting-period field is incomplete, so the product keeps the uncertainty visible instead of treating it as verified.</p></div></div>
+  </section>
+
+  <section class="view" id="accounts">
+    <div class="sectionTitle" style="margin-top:0"><div><div class="eyebrow">Accounts</div><h2>One view across providers</h2></div><span>Synthetic portfolio</span></div>
+    <div class="notice">A production version would require regulated integrations, source-level consent, authentication, data-quality controls and exception handling. This prototype demonstrates the product model only.</div>
+    <div class="list">
+      <div class="row"><div><b>Primary bank</b><small>Everyday cash · verified</small></div><div>¥78,000</div><div><span class="pill">Connected</span></div><button class="btn" onclick="sa_event('neobank_account_detail')">Details</button></div>
+      <div class="row"><div><b>Savings account</b><small>Emergency reserve · verified</small></div><div>¥42,000</div><div><span class="pill">Connected</span></div><button class="btn" onclick="sa_event('neobank_account_detail')">Details</button></div>
+      <div class="row"><div><b>Credit card</b><small>Interest status not verified</small></div><div>-¥12,000</div><div><span class="pill warn">Review</span></div><button class="btn" onclick="openAction('debt')">Review</button></div>
+      <div class="row"><div><b>Investment account</b><small>Market value · illustrative</small></div><div>¥230,000</div><div><span class="pill">Connected</span></div><button class="btn" onclick="sa_event('neobank_account_detail')">Details</button></div>
+    </div>
+  </section>
+
+  <section class="view" id="protection">
+    <div class="sectionTitle" style="margin-top:0"><div><div class="eyebrow">Protection</div><h2>Coverage across providers</h2></div><span>Cross-provider organisation</span></div>
+    <div class="split">
+      <div class="card"><h3>Protection snapshot</h3><div class="metricBig">3 policies</div><p style="color:var(--muted);line-height:1.6">The product organises policy information across providers so users can review total coverage instead of reading each policy in isolation.</p></div>
+      <div class="card"><h3>Data quality</h3><div class="metricBig">2 verified · 1 review</div><p style="color:var(--muted);line-height:1.6">Uncertain fields remain visible and editable before they influence guidance.</p></div>
+    </div>
+    <div class="sectionTitle"><h2>Coverage map</h2><span>Illustrative</span></div>
+    <div class="list">
+      <div class="row"><div><b>Medical coverage</b><small>Provider A</small></div><div>Verified</div><div><span class="pill">Covered</span></div><button class="btn">View</button></div>
+      <div class="row"><div><b>Critical illness</b><small>Provider B</small></div><div>Verified</div><div><span class="pill">Covered</span></div><button class="btn">View</button></div>
+      <div class="row"><div><b>Accident protection</b><small>Provider C · waiting period incomplete</small></div><div>Review</div><div><span class="pill warn">Uncertain</span></div><button class="btn" onclick="sa_event('neobank_protection_review')">Verify</button></div>
+    </div>
+  </section>
+
+  <section class="view" id="insights">
+    <div class="sectionTitle" style="margin-top:0"><div><div class="eyebrow">AI Insights</div><h2>Explain the decision, not invent the facts</h2></div><span>Bounded AI layer</span></div>
+    <div class="split">
+      <div class="insight"><span class="tag">Priority</span><h4>Why is debt review ranked first?</h4><p>Because a ¥12,000 balance exists, but the product does not know whether it is interest-bearing, overdue or within an interest-free period.</p><div class="why"><b>Grounding:</b> verified card balance + missing interest-status field. The AI can explain the missing context; it cannot silently classify the debt as high-cost.</div></div>
+      <div class="insight"><span class="tag">Liquidity</span><h4>Do I have enough emergency cash?</h4><p>The current cash reserve covers about 5.3 months of essential expenses in this synthetic profile.</p><div class="why"><b>Grounding:</b> ¥42,000 cash reserve ÷ ¥8,000 essential monthly expenses. The calculation remains deterministic.</div></div>
+    </div>
+    <div class="sectionTitle"><h2>AI boundary</h2><span>What the assistant may and may not do</span></div>
+    <div class="grid">
+      <div class="card"><h3>Explain</h3><p style="color:var(--muted)">Translate verified financial state into plain language.</p></div>
+      <div class="card"><h3>Surface uncertainty</h3><p style="color:var(--muted)">Point out missing or conflicting context.</p></div>
+      <div class="card"><h3>Prioritise review</h3><p style="color:var(--muted)">Help users decide what deserves attention first.</p></div>
+      <div class="card"><h3>Never silently execute</h3><p style="color:var(--muted)">No money movement or consequential action without explicit control.</p></div>
+    </div>
+    <div style="margin-top:18px"><a class="footerLink fh-link" href="../demo/">Open the deeper Financial Health Copilot MVP →</a></div>
+  </section>
+
+  <section class="view" id="actions">
+    <div class="sectionTitle" style="margin-top:0"><div><div class="eyebrow">Action Center</div><h2>From insight to controlled action</h2></div><span>Human confirmation by design</span></div>
+    <div class="actionCard"><div><h3>Verify card interest status</h3><p>Confirm whether the current balance is interest-bearing before changing repayment or investment priorities.</p></div><button class="btn primary" onclick="toggleConfirm('debtConfirm');sa_event('neobank_action_verify_debt')">Review</button></div>
+    <div id="debtConfirm" class="confirm"><b>Why confirmation comes first</b><p>Debt cost is a material decision input. The product should not infer it from balance alone. A production flow could request statement data or ask the user to confirm the status before giving more specific guidance.</p><button class="btn" onclick="this.parentElement.classList.remove('show');sa_event('neobank_action_dismiss')">Close</button></div>
+    <div class="actionCard"><div><h3>Review protection uncertainty</h3><p>One policy field is incomplete. Verify the source before using it in protection-gap guidance.</p></div><button class="btn" onclick="toggleConfirm('protectConfirm');sa_event('neobank_action_verify_protection')">Review</button></div>
+    <div id="protectConfirm" class="confirm"><b>Source-first verification</b><p>The product would show the policy source, extracted field and confidence state, allowing the user to correct the information before it influences recommendations.</p><button class="btn" onclick="this.parentElement.classList.remove('show')">Close</button></div>
+    <div class="actionCard"><div><h3>Build a stronger emergency reserve</h3><p>If the user confirms a target above the current 5.3 months, the app can translate the gap into a monthly savings plan.</p></div><button class="btn" onclick="sa_event('neobank_action_plan_reserve')">Plan</button></div>
+  </section>
+</main>
+</div>
+<div class="mobileNav"><button class="active" data-view="home">Home</button><button data-view="accounts">Money</button><button data-view="protection">Protect</button><button data-view="insights">AI</button><button data-view="actions">Act</button></div>
+<script>
+function switchView(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));sa_event('neobank_app_view_'+id);window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>switchView(b.dataset.view)));
+function toggleConfirm(id){document.getElementById(id).classList.toggle('show')}
+function openAction(type){switchView('actions');if(type==='debt'){document.getElementById('debtConfirm').classList.add('show')}}
+function carryUtm(){const q=new URLSearchParams(location.search);document.querySelectorAll('a.fh-link').forEach(a=>{const u=new URL(a.href,location.href);['utm_source','utm_medium','utm_campaign','utm_content'].forEach(k=>{if(q.get(k))u.searchParams.set(k,q.get(k))});u.searchParams.set('utm_content','neobank_app_to_financial_health');a.href=u.toString()})}
+carryUtm();
+sa_event('neobank_app_open');
+</script>
+<script async data-strict-utm="true" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+</body></html>
