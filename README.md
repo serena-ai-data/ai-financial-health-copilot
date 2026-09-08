@@ -4,6 +4,24 @@ An independent AI FinTech product case study exploring how fragmented financial 
 
 > **Status:** public product prototype. The current demo uses synthetic data and deterministic scoring rules. The AI Copilot interaction is locally simulated and is **not yet connected to a live LLM API**.
 
+## Portfolio cases
+
+This repository now contains two related but distinct product cases:
+
+### 1. AI Financial Health Copilot
+A live, deeper MVP focused on financial understanding, deterministic scoring, explainability, next-best-action design and trust controls.
+
+- Product case: `index.html`
+- Interactive demo: `demo/`
+
+### 2. AI Neobank Product Case
+A China-market Product Manager case that expands the scope from financial-health decision support into a broader cross-product neobank journey across banking, cards, insurance and investments.
+
+- Product case: `neobank/index.html`
+- Interactive concept app: `neobank/app.html`
+
+The AI Neobank case extends the product scope into a broader cross-product journey, while the Financial Health Copilot remains the deeper implemented MVP module and execution evidence.
+
 ## Product idea
 
 Many users hold financial products across different providers: bank accounts, credit cards, insurance policies and investments. Individual apps show product-level information, but users may still struggle to understand their overall financial position and decide what deserves attention first.
@@ -99,8 +117,9 @@ The repository contains synthetic user data only. No real bank credentials, acco
 
 ## Repository structure
 
-- `index.html` — product case-study website
-- `demo/` — interactive product prototype
+- `index.html` — AI Financial Health Copilot product case-study website
+- `demo/` — live Financial Health Copilot interactive prototype
+- `neobank/` — AI Neobank Product Case and interactive China-market concept app
 - `docs/product-requirements.md` — MVP scope and requirements
 - `docs/product-ownership.md` — backlog, acceptance criteria, system boundary, roadmap, trade-offs and launch plan
 - `docs/scoring-methodology.md` — deterministic scoring logic
